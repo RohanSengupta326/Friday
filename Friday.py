@@ -115,7 +115,7 @@ def SetReminderToday():
 def Reminder():
     note = notification.notify(
                 title = "Reminder!",
-                message =  "Jarvis is reminding you",
+                message =  "Friday is reminding you",
                 timeout=10 
             )
     return note
@@ -141,7 +141,7 @@ if __name__ == "__main__":
         query = takeCommand().lower()
         # logic for executing tasks
 
-        if 'jarvis' in query:
+        if 'friday' in query:
             wishMe()
 
         if 'wikipedia' in query:
@@ -223,5 +223,6 @@ if __name__ == "__main__":
 
 
 
-        elif 'close' in query:
+        elif 'shutdown' in query:
+            speak("I am shutting down")
             exit(0)
